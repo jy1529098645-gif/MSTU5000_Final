@@ -1,0 +1,4 @@
+Base path: 'G:/6000.4.0f1/Editor/Data', plugins path 'G:/6000.4.0f1/Editor/Data/PlaybackEngines', jobs: y
+Cmd: initializeCompiler
+
+Cmd: shutdown
