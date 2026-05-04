@@ -192,7 +192,7 @@ public class VRDoorHingeGrabV2 : MonoBehaviour
 
         if (missionUIController != null)
         {
-            missionUIController.MarkCurrentMissionSuccess();
+           missionUIController.CompleteCurrentMission();
         } 
 
         ActivateCurtainInteraction();
