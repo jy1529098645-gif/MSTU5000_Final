@@ -1,0 +1,2 @@
+G:\MSTU5000_Final\Campus Shield\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+G:\MSTU5000_Final\Campus Shield\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
