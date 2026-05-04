@@ -6,6 +6,7 @@ public class HideUnderDesk : MonoBehaviour
 {
     public Transform xrOrigin;
     public Transform hidePosition;
+    public PCController pcController;
 
     private bool playerNearby = false;
     private bool isHiding = false;
@@ -23,24 +24,20 @@ public class HideUnderDesk : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Triggered by: " + other.name);
-        if (other.CompareTag("Player"))
-        {
-            playerNearby = true;
-        }
+        playerNearby = true;
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerNearby = false;
-        }
+        playerNearby = false;
     }
 
     IEnumerator HidePlayer()
     {
         isHiding = true;
+
+        if (pcController != null)
+            pcController.enabled = false;
 
         float duration = 1f;
         float elapsed = 0f;
@@ -53,6 +50,9 @@ public class HideUnderDesk : MonoBehaviour
             xrOrigin.position = Vector3.Lerp(startPos, endPos, elapsed / duration);
             yield return null;
         }
+
+        if (pcController != null)
+            pcController.enabled = true;
 
         Debug.Log("Player is hiding under desk!");
     }
